@@ -49,6 +49,3 @@ g = "free"
 print(g+str(f))
 # 3.repr(x)：一个函数，反引号的替代品，能够把结果字符串转化为合法的python表达式。
 print(g+repr(f))
-
-
-

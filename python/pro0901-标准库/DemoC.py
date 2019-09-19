@@ -110,11 +110,11 @@ def add_child_node(nodelist, element):
         node.append(element)
 def del_node_by_tagkeyvalue(nodelist, tag, kv_map):
     ''' 同过属性及属性值定位一个节点，并删除之 nodelist: 父节点列表 tag:子节点标签 kv_map: 属性及属性值列表 '''
-        for parent_node in nodelist:
-            children = parent_node.getchildren()
-            for child in children:
-                if child.tag == tag and if_match(child, kv_map):
-                    parent_node.remove(child)
+    for parent_node in nodelist:
+        children = parent_node.getchildren()
+        for child in children:
+            if child.tag == tag and if_match(child, kv_map):
+                parent_node.remove(child)
 if __name__ == "__main__":
 # 1. 读取xml文件
     tree = read_xml("./test.xml")

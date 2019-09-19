@@ -24,5 +24,5 @@ else:
 x = 10
 try:
     x = 1/0
-except Exception,e:print(e)
+# except Exception,e:print(e)
 finally:print("del e")
