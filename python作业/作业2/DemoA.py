@@ -34,13 +34,37 @@ dictionary=dict(zip(ListA,ListB))
 print(dictionary)
 
 # 6.使用字典来创建程序，提示用户输入电话号码，并用英文单词形式显示数字。例如：输入138 显示为“one three eight ”
-a =[i for i in range(0,10)]
-b = ['zero','one','two','three','four','five','six','seven','eight','nine']
-mydict = dict(zip(a,b))
-print("请输入电话号码：")
-input()
-for i in range(0,10):
-    print(mydict(i))
+numWord = ["zero","one","two","three","four","five","six","seven","eight","nine"]
+phoneNum = str(input("输入电话号码："))
+for i in range(len(phoneNum)):
+    getNum = ord(phoneNum[i])-ord('0')
+    print(numWord[getNum], end=" ")
 
 # 7.莫尔斯电码采用了短脉冲和长脉冲（分别为点和点划线） 来编码字母和数字。例如，字母“A”是点划线，“B”是点划线点点。
+# 1）创建字典，将字符映射到莫尔斯电码。
+# 2）输入一段英文，翻译成莫尔斯电文。
+import string
+def Mostran(wholetext):
+    f = open("E:\\大三上\\python\\Mos.txt","r")
+    Mostext = ""
+    for line in f:
+        Mostext += line
+    f.close()
+    Lwhole = Mostext.split()
 
+    L1 = Lwhole[::2]    # 用这种间隔分片出来就是列表
+    L2 = Lwhole[1::2]
+    MosDict = dict(zip(L1, L2))
+
+    for char in wholetext:
+        print(MosDict[char])
+
+def main():
+    temp = input("\nEnter a passage:")
+    temp = temp.upper()
+    wholetext=""
+    for char in temp:
+        if char not in string.whitespace+string.punctuation:
+            wholetext += char
+        translation = Mostran(wholetext)
+main()
