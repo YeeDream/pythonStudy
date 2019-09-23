@@ -45,7 +45,7 @@ for i in range(len(phoneNum)):
 # 2）输入一段英文，翻译成莫尔斯电文。
 import string
 def Mostran(wholetext):
-    f = open("E:\\大三上\\python\\Mos.txt","r")
+    f = open("E:\\大三上\\python\\Mos.txt", "r")
     Mostext = ""
     for line in f:
         Mostext += line
