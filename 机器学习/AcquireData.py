@@ -9,11 +9,10 @@ from sklearn.model_selection import train_test_split
 iris = datasets.load_iris()
 X = iris.data
 y = iris.target
-'''
+
 print(X[0:10])
 print(y[0:150])
 print(iris.DESCR)
-'''
 
 # 拆分训练集、测试集
 #  X特征的二维数组：包含数据，每个数据点对应一行，每个特征对应一列
