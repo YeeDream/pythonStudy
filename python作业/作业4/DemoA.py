@@ -13,7 +13,7 @@ if a+b>c and a+c>b and b+c>a:
         print("该三角形是等边三角形");
     elif a==b or a==c or b==c:
         print("该三角形是等腰三角形")
-    else:
+    elif a!=b!=c:
         print("该三角形是一般三角形！")
 else:
     print("不满足构成三角形的条件")
